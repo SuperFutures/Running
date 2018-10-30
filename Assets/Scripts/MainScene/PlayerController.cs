@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private bool arrived;
     private float Timer;
 
+    public Transform Skin;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody>();
@@ -99,11 +101,22 @@ public class PlayerController : MonoBehaviour
         if (gameCtrl.Dead)
         {
             Timer += Time.deltaTime;
-            if (Timer<2)
-            {
-                
-            }
+            
+                if (Timer%1<0.3f)
+                {
+                    Skin.gameObject.SetActive(true);
+                }
+                else
+                {
+                    Skin.gameObject.SetActive(false);
+                }
+            
         }
+        else if (!Skin.gameObject.activeSelf)
+        {
+            Skin.gameObject.SetActive(true);
+        }
+       
 
 
     }

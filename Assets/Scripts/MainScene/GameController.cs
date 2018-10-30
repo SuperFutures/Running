@@ -91,9 +91,10 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
         yield return  new WaitForSeconds(1.5f);
-       
-        Continue();
+
         Dead = false;
+        Continue();
+        
     }
 
   

@@ -871,6 +871,7 @@ MonoBehaviour:
   changeTrackSpeed: 10
   useKinectInput: 0
   animator: {fileID: 469825601}
+  Skin: {fileID: 539850256}
 --- !u!136 &486779298
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1008,7 +1009,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 82
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!136 &536460879
 CapsuleCollider:
@@ -1023,6 +1024,11 @@ CapsuleCollider:
   m_Height: 2.58
   m_Direction: 1
   m_Center: {x: 0, y: -0.17, z: 0}
+--- !u!4 &539850256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4716740120580238, guid: 313ad0ef31f75b84f9f31c0528802fdd,
+    type: 2}
+  m_PrefabInternal: {fileID: 469825597}
 --- !u!1 &685098052
 GameObject:
   m_ObjectHideFlags: 0
