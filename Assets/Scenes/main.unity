@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc61ce3ca1b8eb2458c28d6472e00fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  revive: 0
 --- !u!1 &335583375
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +790,19 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1224422033887082, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258019779867072, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137380874227758632, guid: 313ad0ef31f75b84f9f31c0528802fdd,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 313ad0ef31f75b84f9f31c0528802fdd, type: 2}
   m_IsPrefabAsset: 0
@@ -1121,7 +1135,7 @@ MonoBehaviour:
   - {fileID: 1961063969064950, guid: b02e94674bbcf0043b2362f6f2e2bf62, type: 2}
   initialSpeed: 10
   speedRate: 1.5
-  acceleratedNumber: 3
+  acceleratedNumber: 2
   length: 200
   count: 0
   currentSpeed: 0
@@ -1666,7 +1680,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &965290304
 Light:
   m_ObjectHideFlags: 0

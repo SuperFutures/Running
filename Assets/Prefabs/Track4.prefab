@@ -326,22 +326,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1186096601643884
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4043357400005428}
-  - component: {fileID: 65837832940963436}
-  m_Layer: 8
-  m_Name: Bridge (2)
-  m_TagString: Obstacle
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1200485147888234
 GameObject:
   m_ObjectHideFlags: 1
@@ -1341,19 +1325,6 @@ Transform:
   m_Father: {fileID: 4570747286267512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4043357400005428
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186096601643884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.3, y: 0, z: -6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4699417058722960}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4048096832867040
 Transform:
   m_ObjectHideFlags: 1
@@ -2001,7 +1972,6 @@ Transform:
   - {fileID: 4577911592767258}
   - {fileID: 4741816127129386}
   - {fileID: 4385044334890174}
-  - {fileID: 4043357400005428}
   m_Father: {fileID: 4709526853869628}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4421,7 +4391,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1.11, z: 3}
-  m_Center: {x: 0, y: 2.27, z: 0}
+  m_Center: {x: -13.38, y: 2.27, z: 0}
 --- !u!65 &65086476087491032
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4505,7 +4475,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1.11, z: 3}
-  m_Center: {x: 0, y: 2.27, z: 0}
+  m_Center: {x: -1.21, y: 2.27, z: 0}
 --- !u!65 &65479117097462102
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4517,7 +4487,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1.11, z: 3}
-  m_Center: {x: 0, y: 2.27, z: 0}
+  m_Center: {x: 7.14, y: 2.27, z: 0}
 --- !u!65 &65595891090090592
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4553,7 +4523,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 1.11, z: 3}
-  m_Center: {x: 0, y: 2.27, z: 0}
+  m_Center: {x: 4.84, y: 2.27, z: 0}
 --- !u!65 &65691723942639358
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -4602,18 +4572,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65837832940963436
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1186096601643884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1.11, z: 3}
-  m_Center: {x: 0, y: 2.27, z: 0}
 --- !u!65 &65846226021283942
 BoxCollider:
   m_ObjectHideFlags: 1

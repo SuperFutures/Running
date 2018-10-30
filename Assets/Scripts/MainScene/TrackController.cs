@@ -25,11 +25,15 @@ public class TrackController : MonoBehaviour {
     private void Awake() {
         count = 0;
        
-        if (DataTransformer.initialSpeed == 0f) {
-            currentSpeed = initialSpeed * Time.deltaTime;
+        //
+        if (DataTransformer.initialSpeed == 0f)
+        {
+            currentSpeed = initialSpeed * Time.fixedDeltaTime;
 
             DataTransformer.initialSpeed = currentSpeed;
             DataTransformer.currentSpeed = currentSpeed;
+       
+
         } else {
             currentSpeed = DataTransformer.initialSpeed;
         }

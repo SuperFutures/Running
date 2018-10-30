@@ -93,6 +93,8 @@ public class PlayerController : MonoBehaviour
 
         grouded = Physics.Linecast(transform.position, foot.position,
             1 << LayerMask.NameToLayer("Ground"));
+
+        
     }
 
     private void FixedUpdate()
@@ -155,6 +157,7 @@ public class PlayerController : MonoBehaviour
     public void Death()
     {
         //Time.timeScale = 0;
+      
     }
     public void Squat()
     {

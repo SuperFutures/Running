@@ -13,8 +13,11 @@ public class GameController : MonoBehaviour
 
     private GestureDetect gestureListener;
     private bool isPause = false;
+
+    public bool revive=false;
     private void Awake()
     {
+       
         trackCtrl = GameObject.Find("TrackController").GetComponent<TrackController>();
 
         pausedMenu = GameObject.Find("PausedMenu");
@@ -33,6 +36,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+
         if (!gestureListener)
             return;
 
@@ -50,6 +54,8 @@ public class GameController : MonoBehaviour
             }
 
         }
+
+      
     }
 
     //游戏结束调用的函数
@@ -58,9 +64,19 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
 
         trackCtrl.Stop();
-
-        restartMenu.SetActive(true);
+      
+        StartCoroutine(Revive());
+//        restartMenu.SetActive(true);
     }
+
+    IEnumerator Revive()
+    {
+        yield return  new WaitForSeconds(3);
+
+        Continue();
+    }
+
+  
 
     //游戏暂停调研的函数
     public void Pause()
@@ -92,6 +108,8 @@ public class GameController : MonoBehaviour
     }
     //退出游戏
     public void Exit() {
-        Application.Quit();
+        SceneManager.LoadScene("menu", LoadSceneMode.Single);
+        Time.timeScale = 1;
+
     }
 }
