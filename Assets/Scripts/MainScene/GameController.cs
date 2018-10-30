@@ -10,15 +10,24 @@ public class GameController : MonoBehaviour
     private GameObject restartMenu;
 
     private TrackController trackCtrl;
+    private PlayerController PlayerCtrl;
 
     private GestureDetect gestureListener;
     private bool isPause = false;
 
-    public bool revive=false;
+    public bool Dead=false;
+
+    public delegate void DelegateGlint();
+    public  event DelegateGlint eventGlint;
+
     private void Awake()
     {
-       
-        trackCtrl = GameObject.Find("TrackController").GetComponent<TrackController>();
+        
+         trackCtrl = GameObject.Find("TrackController").GetComponent<TrackController>();
+        PlayerCtrl = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        eventGlint +=new DelegateGlint(PlayerCtrl.PlayerGlint);
+
 
         pausedMenu = GameObject.Find("PausedMenu");
         pausedMenu.SetActive(false);
@@ -64,16 +73,27 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
 
         trackCtrl.Stop();
-      
+
+        Dead = true;
+        eventGlint();
+
         StartCoroutine(Revive());
+
+        
 //        restartMenu.SetActive(true);
     }
 
+
+   
+
+
     IEnumerator Revive()
     {
-        yield return  new WaitForSeconds(3);
-
+        Time.timeScale = 1;
+        yield return  new WaitForSeconds(1.5f);
+       
         Continue();
+        Dead = false;
     }
 
   
@@ -96,6 +116,7 @@ public class GameController : MonoBehaviour
         trackCtrl.Continue();
 
         pausedMenu.SetActive(false);
+       
     }
 
     //游戏重新开始调用的游戏

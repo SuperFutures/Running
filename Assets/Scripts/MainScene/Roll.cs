@@ -12,8 +12,11 @@ public class Roll : MonoBehaviour {
     private bool hasCreated;
     private GameObject[] tracks;
 
+    public GameController GameCtrl;
+    public bool Dead = false;
     private void Awake() {
         trackCtrl = GameObject.Find("TrackController").GetComponent<TrackController>();
+        GameCtrl = GameObject.Find("GameController").GetComponent<GameController>();
     }
     private void Start() {
         tracks = trackCtrl.tracks;
@@ -39,6 +42,18 @@ public class Roll : MonoBehaviour {
             hasCreated = true;
 
             CreateTrack();
+        }
+
+
+        if (GameCtrl.Dead && Dead)//复活
+        {
+            Dead = true;
+            transform.position = new Vector3(
+                transform.position.x + 2,
+                transform.position.y,
+                transform.position.z
+            );
+           
         }
     }
 

@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider SquatCollider;
 
     private bool arrived;
+    private float Timer;
 
     private void Awake()
     {
@@ -94,7 +95,17 @@ public class PlayerController : MonoBehaviour
         grouded = Physics.Linecast(transform.position, foot.position,
             1 << LayerMask.NameToLayer("Ground"));
 
-        
+
+        if (gameCtrl.Dead)
+        {
+            Timer += Time.deltaTime;
+            if (Timer<2)
+            {
+                
+            }
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -111,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
         //跳跃和下蹲都只有在人物脚在平面上的时候才能做
         //变道过程中不能跳跃或者蹲下
-        if (grouded && arrived)
+        if (grouded && arrived&&!gameCtrl.Dead)
         {
             if (!useKinectInput)
             {
@@ -175,5 +186,11 @@ public class PlayerController : MonoBehaviour
             Death();
             gameCtrl.Gameover();
         }
+    }
+
+
+    public void PlayerGlint()
+    {
+       
     }
 }
