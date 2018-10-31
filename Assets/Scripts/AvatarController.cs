@@ -952,7 +952,7 @@ public class AvatarController : MonoBehaviour
 	
 	public bool isJumping(){
 //		return currentLeftFootJointPosition > -0.85 && currentRightFootJointPosition > -0.85 && currentHeadJointPostion > 0.65;
-		return  currentHeadJointPostion > 0.8;
+		return  currentHeadJointPostion > 0.9;
 	}
 	
 	public bool isCrouch(){

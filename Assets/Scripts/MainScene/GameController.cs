@@ -130,8 +130,9 @@ public class GameController : MonoBehaviour
     }
     //退出游戏
     public void Exit() {
-        SceneManager.LoadScene("menu", LoadSceneMode.Single);
-        Time.timeScale = 1;
+//        SceneManager.LoadScene("menu", LoadSceneMode.Single);
+//        Time.timeScale = 1;
 
+        Application.Quit();
     }
 }

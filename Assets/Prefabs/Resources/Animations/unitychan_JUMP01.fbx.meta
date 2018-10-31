@@ -583,7 +583,7 @@ ModelImporter:
     4300050: uwagi_BK
     4300052: shirts_sode_BK
     4300054: cheek
-    7400000: JumpUp
+    7400000: JUMP01
     9500000: //RootNode
     13700000: button
     13700002: hair_accce
@@ -638,10 +638,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: JumpUp
+      name: JUMP01
       takeName: Take 001
-      firstFrame: 22
-      lastFrame: 23
+      firstFrame: 1
+      lastFrame: 62
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
