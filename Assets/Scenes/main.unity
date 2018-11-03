@@ -2817,7 +2817,7 @@ MonoBehaviour:
   gravity: 26
   trackWidth: 6
   changeTrackSpeed: 10
-  useKinectInput: 0
+  useKinectInput: 1
   animator: {fileID: 867360302}
   Skin: {fileID: 1117173244}
 --- !u!136 &486779298
